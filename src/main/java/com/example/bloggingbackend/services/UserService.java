@@ -1,16 +1,12 @@
 package com.example.bloggingbackend.services;
 
 import com.example.bloggingbackend.dto.CreateUserRequestDTO;
-import com.example.bloggingbackend.dto.DeleteUserRequestDTO;
 import com.example.bloggingbackend.dto.UpdateUserPasswordRequestDTO;
 import com.example.bloggingbackend.models.User;
 import com.example.bloggingbackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
-
-import java.util.Objects;
 
 @Service
 public class UserService {
@@ -40,9 +36,5 @@ public class UserService {
         }
         user.setPassword(newPassword);
         userRepository.save(user);
-    }
-
-    public void deleteUser(DeleteUserRequestDTO deleteUserDTO) {
-        // no delete of user
     }
 }

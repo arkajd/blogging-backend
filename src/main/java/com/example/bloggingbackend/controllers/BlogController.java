@@ -29,9 +29,9 @@ public class BlogController {
         blogService.updateBlog(updateBlogRequestDTO);
     }
 
-    @DeleteMapping("/delete")
-    public void deleteBlog(@RequestBody DeleteBlogRequestDTO deleteBlogRequestDTO){
-        blogService.deleteBlog(deleteBlogRequestDTO);
+    @DeleteMapping("/{blogId}")
+    public void deleteBlog(@PathVariable String blogId, @RequestHeader(name = "userId") String userId){
+        blogService.deleteBlog(blogId, userId);
     }
 
 

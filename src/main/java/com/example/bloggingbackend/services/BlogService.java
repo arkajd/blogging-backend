@@ -57,11 +57,7 @@ public class BlogService {
         blogRepository.save(blog);
     }
 
-    public void deleteBlog(DeleteBlogRequestDTO deleteBlogRequestDTO) {
-        logger.info("user id :" + deleteBlogRequestDTO.getUserid());
-        String userId = deleteBlogRequestDTO.getUserid();
-        String blogId = deleteBlogRequestDTO.getBlogId();
-
+    public void deleteBlog(String blogId, String userId) {
         Optional<User> optionalUser = userRepository.findById(Long.valueOf(userId));
         if(optionalUser.isEmpty()){
             return;
@@ -71,6 +67,7 @@ public class BlogService {
             return;
         }
         Blog existingBlog = optionalBlog.get();
+        blogRepository.delete(existingBlog);
 
     }
 }

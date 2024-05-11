@@ -24,8 +24,8 @@ public class CommentController {
         commentService.updateComment(updateCommentRequestDTO);
     }
 
-    @DeleteMapping("/delete")
-    public void deleteComment(@RequestBody DeleteCommentRequestDTO deleteCommentRequestDTO){
-        commentService.deleteComment(deleteCommentRequestDTO);
+    @DeleteMapping("/{commentId}")
+    public void deleteComment(@PathVariable String commentId, @RequestHeader(name = "userId") String userId){
+        commentService.deleteComment(commentId, userId);
     }
 }

@@ -47,17 +47,14 @@ public class CommentService {
         }
     }
 
-    public void deleteComment(DeleteCommentRequestDTO deleteCommentRequestDTO) {
-        Optional<User> optionalUser = userRepository.findById(Long.valueOf(deleteCommentRequestDTO.getUserId()));
+    public void deleteComment(String commentId, String userId) {
+        Optional<User> optionalUser = userRepository.findById(Long.valueOf(userId));
         if(optionalUser.isEmpty()){
             return;
         }
-
-        Optional<Comment> optionalComment = commentRepository.findById(Long.valueOf(deleteCommentRequestDTO.getCommentId()));
-
+        Optional<Comment> optionalComment = commentRepository.findById(Long.valueOf(commentId));
         if(optionalComment.isPresent()){
-            Comment existingComment = optionalComment.get();
-
+            commentRepository.delete(optionalComment.get());
         }
     }
 }

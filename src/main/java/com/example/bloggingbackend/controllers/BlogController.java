@@ -1,7 +1,6 @@
 package com.example.bloggingbackend.controllers;
 
 import com.example.bloggingbackend.dto.CreateBlogRequestDTO;
-import com.example.bloggingbackend.dto.DeleteBlogRequestDTO;
 import com.example.bloggingbackend.dto.UpdateBlogRequestDTO;
 import com.example.bloggingbackend.services.BlogService;
 import org.slf4j.Logger;

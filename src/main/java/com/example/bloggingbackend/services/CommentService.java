@@ -1,7 +1,6 @@
 package com.example.bloggingbackend.services;
 
 import com.example.bloggingbackend.dto.CreateCommentRequestDTO;
-import com.example.bloggingbackend.dto.DeleteCommentRequestDTO;
 import com.example.bloggingbackend.dto.UpdateCommentRequestDTO;
 import com.example.bloggingbackend.models.Blog;
 import com.example.bloggingbackend.models.Comment;

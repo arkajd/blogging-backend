@@ -1,7 +1,6 @@
 package com.example.bloggingbackend.services;
 
 import com.example.bloggingbackend.dto.CreateBlogRequestDTO;
-import com.example.bloggingbackend.dto.DeleteBlogRequestDTO;
 import com.example.bloggingbackend.dto.UpdateBlogRequestDTO;
 import com.example.bloggingbackend.models.Blog;
 import com.example.bloggingbackend.models.User;

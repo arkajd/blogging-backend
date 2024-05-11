@@ -1,7 +1,6 @@
 package com.example.bloggingbackend.controllers;
 
 import com.example.bloggingbackend.dto.CreateCommentRequestDTO;
-import com.example.bloggingbackend.dto.DeleteCommentRequestDTO;
 import com.example.bloggingbackend.dto.UpdateCommentRequestDTO;
 import com.example.bloggingbackend.services.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
